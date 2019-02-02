@@ -1,0 +1,26 @@
+Project 1 Title: Appetite
+ 
+Members:
+Arjun,
+Larry,
+Rad,
+
+Project Description:
+1.User chooses b/w using ingredients they have or a type of food they want
+2. Call api to give a list of options to choose from
+3. When the option is chosen it give a nutritional fact of  the food
+
+APIs to Use:
+http://www.recipepuppy.com/about/api/
+https://developer.nutritionix.com
+
+Rough BD:
+first create a basic layout with bootstrap to get user input
+section to display food options API data
+section to display nutritional facts from API
+code JS to get user input
+push user input to food api
+store user choice send to nutrition api
+use a different framework to style
+
+More to Come
