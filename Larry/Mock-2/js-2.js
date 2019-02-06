@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-
-
-
 	let que = "";
 	var special = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?@]/);
 
@@ -36,16 +33,22 @@ $(document).ready(function () {
 					<form action="` + recipe.url + `">
 					<input type='submit' value='Full Recipe'>
 					</form>
-					<div class="item"` + i + `
-					<ul id="ingr` + i + `"</ul>
+					<button data-target="modal` + i + `" class="btn modal-trigger" id="butt">Modal</button>
+					<div  id="modal` + i + `"class="modal">
+					<div class="modal-content">
+					<h4>Ingredients</h4>
+					<div id="item` + i + `"></div>
+					</div>
 					</div>`);
+
+
+
 					recipe.ingredientLines.forEach(function (ing) {
 						console.log(ing);
-						$("#ingr" + i).append("<li>" + ing + "</li>");
+						$("#item" + i).append("<p>" + ing + "</p>");
 					})
 				})
 			})
-
 
 		} else {
 			function renderIngredients() {
@@ -113,5 +116,9 @@ $(document).ready(function () {
 	$('select').formSelect();
 	$('.tooltipped').tooltip();
 	$('select').formSelect();
+	$('.modal').modal();
 
+	$("body").on("click", "#butt", function () {
+		$('.modal').modal();
+	})
 });

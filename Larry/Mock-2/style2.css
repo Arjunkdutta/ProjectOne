@@ -2,6 +2,10 @@ nav {
 	background-color: beige;
 }
 
+p {
+	text-align: left;
+}
+
 .container {
 	border: yellow 1px solid;
 }
