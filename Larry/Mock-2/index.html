@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="style2.css">
+	<title>Mock 2</title>
+</head>
+
+<body class="brown lighten-1">
+	<nav class="red darken-1">
+		<div class="nav-wrapper">
+			<a href="#!" class="brand-logo center">McAppetite</a>
+			<ul class="right">
+				<li class="hide-on-med-and-down"><a href="https://developer.edamam.com/" class="white-text">API 1</a></li>
+				<li class="hide-on-med-and-down"><a href="https://www.thecocktaildb.com/api.php" class="white-text">API 2</a></li>
+				<li class="hide-on-med-and-down"><a href="https://github.com/Arjunkdutta/ProjectOne" class="white-text">Github</a></li>
+				<li class="hide-on-large-only"><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right">menu</i></a></li>
+			</ul>
+			<ul id="dropdown1" class="dropdown-content white-text">
+				<li><a href="#" disabled selected><span class="red-text">Close</span></a></li>
+				<li><a href="https://developer.edamam.com/">API 1</a></li>
+				<li><a href="https://www.thecocktaildb.com/api.php">API 2</a></li>
+				<li><a href="https://github.com/Arjunkdutta/ProjectOne">Github</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="con">
+		<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>Ingredients</h4>
+				<p>A bunch of text</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="container">
+		<div class="section center-align">
+			<h2> <span class="white-text">Food Selection</span>
+			</h2>
+			<p>Ingredients</p>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<input type="text" class="validate" id="Fsearch" placeholder="Ex: Pizza" value="pizza">
+				<label style="color:white; font-size: 20px; ">Recipe Search</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s-1">
+				<label>
+					<input name="group1" type="radio" checked value="food" id="food" />
+					<span class="rWhite">Food</span>
+				</label>
+				<label>
+					<input name="group1" type="radio" value="cocktail" id="cocktail" />
+					<span class="rWhite">Cocktail</span>
+				</label>
+			</div>
+		</div>
+		<!-- <div class="input-field col s5">
+				<input type="text">
+				<label>Cocktail Recipe Search</label>
+			</div>
+			<div class="col s1">
+				<button class="btn waves-effect waves-light btn-small" type="submit" name="action">Search
+				</button>
+			</div> -->
+
+
+		<!--End of Row-->
+		<div class="row">
+			<div class="col s1">
+				<button class="btn waves-effect waves-light btn-small red" id="Sfood" type="submit" name="action">Search
+				</button>
+			</div>
+		</div>
+		<div id="preset" class="center-align">
+		</div><!-- End Preset Div -->
+
+		<div id="drink-div" class="center-align"></div>
+		<!-- Container End -->
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="js-2.js"></script>
+</body>
+
+</html>
