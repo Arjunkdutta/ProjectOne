@@ -1,11 +1,6 @@
 $(document).ready(function () {
 
-	$(".dropdown-trigger").dropdown();
-	//Options selection dropdown
-	$('select').formSelect();
-	$('.tooltipped').tooltip();
-	$('select').formSelect();
-	$('.modal').modal();
+
 
 
 	let que = "";
@@ -34,10 +29,19 @@ $(document).ready(function () {
 				response.hits.forEach(function (element, i) {
 					console.log(element.recipe);
 					let recipe = element.recipe;
-					$("#preset").append("<div class='boxes'><h4>" + recipe.label + "</h4><img src=" + recipe.image + "><form action=" + recipe.url + "><input type='submit' value='Go to Full Recipe'></form><div id='ingr" + i + "' class=''>Ingredients</div> </div>");
+					$("#preset").append(`
+					<div class='boxes'>
+					<h4>" ` + recipe.label + `"</h4>
+					<img src="` + recipe.image + `">
+					<form action="` + recipe.url + `">
+					<input type='submit' value='Full Recipe'>
+					</form>
+					<div class="item"` + i + `
+					<ul id="ingr` + i + `"</ul>
+					</div>`);
 					recipe.ingredientLines.forEach(function (ing) {
 						console.log(ing);
-						// $("#ingr" + i).append("<div class=''>" + ing + "</div>");
+						$("#ingr" + i).append("<li>" + ing + "</li>");
 					})
 				})
 			})
@@ -105,4 +109,9 @@ $(document).ready(function () {
 			renderIngredients();
 		}
 	})
+	$(".dropdown-trigger").dropdown();
+	$('select').formSelect();
+	$('.tooltipped').tooltip();
+	$('select').formSelect();
+
 });

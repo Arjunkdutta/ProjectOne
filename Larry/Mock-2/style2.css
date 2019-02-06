@@ -1,3 +1,7 @@
+nav {
+	background-color: beige;
+}
+
 .container {
 	border: yellow 1px solid;
 }
@@ -15,7 +19,7 @@
 }
 
 .boxes h4 {
-	font-size: 10px;
+	font-size: 20px;
 }
 
 .rWhite {
