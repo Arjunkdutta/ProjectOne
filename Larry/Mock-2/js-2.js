@@ -1,16 +1,24 @@
 $(document).ready(function () {
 
 	let que = "";
+
+	//Reg Exp for input validation
 	var special = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?@]/);
 
+	//click function that searches through 2 APIs depending on user selection
+
 	$("#Sfood").click(function () {
+		//emptys the display
 		$("#drink-div").empty();
 		$("#preset").empty();
 		que = $("#Fsearch").val();
 		console.log(que);
+
+		//More input Validation
 		if (que === undefined || que === "" || que === null || special.test(que) == true) {
 			console.log(que);
 			console.log("Check your input");
+			//display toast if validation
 			M.toast({
 				html: "Something's wrong with your input!",
 			})
@@ -20,10 +28,20 @@ $(document).ready(function () {
 			let radio = $("input[name=group1]:checked").val();
 			console.log(radio);
 			$.ajax({
-				url: 'https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=' + que + '&app_id=4e81de9e&app_key=372f6145e47ac69d679f51f5e49be2ed',
+				//cors with heroku for edamam API
+				url: 'https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=' + que + '&app_id=4e81de9e&app_key=372f6145e47ac69d679f51f5e49be2ed&from=0&to=8',
 				method: 'GET',
 			}).then(function (response) {
+				console.log(response);
+				if (response.count == 0 || que === "mojito" || que === "whiskey") {
+
+					M.toast({
+						html: "Sorry I did not find anything for " + que,
+					});
+					return false;
+				}
 				response.hits.forEach(function (element, i) {
+
 					console.log(element.recipe);
 
 					let recipe = element.recipe;
@@ -70,7 +88,9 @@ $(document).ready(function () {
 				}).then(function (response) {
 					console.log(response);
 					if (response.drinks === undefined || response.drinks === null) {
-						$("#drink-div").append("<h3>Sorry I could not find a recipe</h3>")
+						M.toast({
+							html: "Sorry I did not find anything for " + que,
+						});
 					} else {
 						//  console.log(response.drinks);      // for debugging purposes 
 

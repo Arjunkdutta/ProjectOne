@@ -14,6 +14,10 @@ p {
 	text-align: left;
 }
 
+input {
+	font-family: 'Itim', cursive;
+}
+
 .container {
 	width: 95%;
 }
@@ -29,6 +33,12 @@ nav {
 
 .nav-wrapper {
 	border: none;
+}
+
+.nlink:hover {
+	font-weight: bolder;
+	background: #f5523d;
+	border-radius: 10px;
 }
 
 .head-logo {
@@ -47,18 +57,32 @@ nav {
 	border-bottom: 5px solid #ffffff;
 }
 
-
 .search {
-	color: #ffffff;
+	color: #fff;
 	text-align: center;
-	text-shadow: -1px 0 #ffe259, 0 1px #ffe259, 1px 0 #ffe259, 0 -1px #ffe259;
 }
 
-
-div input .search {
-	background-color: red;
+.search-btn {
+	width: 375px;
+	font-family: 'Itim', cursive;
+	font-size: 17px;
+	height: 40px;
+	border-radius: 5px;
 }
 
+body .search-btn:hover {
+	font-size: 19px;
+	color: #f5523d;
+	background-color: #fff !important;
+}
+
+.foods-box {
+	margin-left: 40px;
+}
+
+.foods-box {
+	margin-top: 40px;
+}
 
 .boxes {
 	float: left;
@@ -71,7 +95,7 @@ div input .search {
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
-	margin-top: 13px;
+	margin-top: 20px;
 }
 
 .boxes img {
@@ -87,9 +111,15 @@ div input .search {
 
 .boxes #butt {
 	float: left;
-	background-color: #f34242;
+	background-color: #f5523d;
 	color: white;
-	margin-left: 7px;
+	margin-left: 12px;
+	border-radius: 5px;
+}
+
+#butt:hover {
+	color: #f5523d;
+	background-color: #fff;
 }
 
 .rWhite {
