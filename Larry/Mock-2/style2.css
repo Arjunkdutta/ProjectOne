@@ -1,14 +1,39 @@
+body {
+	background: #16222A;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #3A6073, #16222A);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #3A6073, #16222A);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container {
+	width: 95%;
+}
+
 nav {
-	background-color: beige;
+	border-top: 10px solid #141355;
+	border-bottom: 3px solid #141355;
+	background-color: #fcfafa;
+	height: 150px;
+}
+
+.logo-head {
+	margin-top: 2%;
+}
+
+.full {
+	background-image: url(Imgs/food.jpeg);
+	background-repeat: no-repeat;
+	background-position: px;
+	height: 400px;
 }
 
 p {
 	text-align: left;
 }
 
-.container {
-	border: yellow 1px solid;
-}
 
 .boxes {
 	float: left;
@@ -19,11 +44,12 @@ p {
 
 .boxes img {
 	height: auto;
-	width: 250px;
+	width: 270px;
 }
 
 .boxes h4 {
 	font-size: 20px;
+	color: #fff;
 }
 
 .rWhite {
