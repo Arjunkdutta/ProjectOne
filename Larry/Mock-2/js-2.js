@@ -25,10 +25,20 @@ $(document).ready(function () {
 			}).then(function (response) {
 				response.hits.forEach(function (element, i) {
 					console.log(element.recipe);
+
 					let recipe = element.recipe;
+					let name = recipe.label;
+
+					function truncate(string) {
+						if (string.length > 25)
+							return string.substring(0, 25) + '...';
+						else
+							return string;
+					};
+
 					$("#preset").append(`
 					<div class='boxes'>
-					<h4>" ` + recipe.label + `"</h4>
+					<h4>" ` + truncate(name) + `"</h4>
 					<img src="` + recipe.image + `">
 					<form action="` + recipe.url + `">
 					<input type='submit' value='Full Recipe'>
