@@ -30,8 +30,8 @@ $(document).ready(function () {
 					let name = recipe.label;
 
 					function truncate(string) {
-						if (string.length > 25)
-							return string.substring(0, 25) + '...';
+						if (string.length > 23)
+							return string.substring(0, 23) + '...';
 						else
 							return string;
 					};
@@ -41,11 +41,11 @@ $(document).ready(function () {
 					<h4>" ` + truncate(name) + `"</h4>
 					<img src="` + recipe.image + `">
 					<form action="` + recipe.url + `">
-					<input type='submit' value='Full Recipe'>
+					<input type='submit' class="btn" id="butt" value='Full Recipe'>
 					</form>
-					<button data-target="modal` + i + `" class="btn modal-trigger" id="butt">Modal</button>
+					<button data-target="modal` + i + `" class="btn modal-trigger" id="butt">Ingredients</button>
 					<div  id="modal` + i + `"class="modal">
-					<div class="modal-content">
+					<div class="modal-content clear">
 					<h4>Ingredients</h4>
 					<div id="item` + i + `"></div>
 					</div>
