@@ -60,11 +60,16 @@ nav {
 }
 
 .full {
+	-webkit-transition: background-image .5s linear;
+	/* Safari */
+	transition: background-image .5s linear;
 	background-image: url(Imgs/food.jpeg);
 	background-repeat: no-repeat;
 	background-position: -200px -760px;
 	border-bottom: 5px solid #ffffff;
+
 }
+
 
 .full:hover {
 	background-image: url(Imgs/food-blur.png);
