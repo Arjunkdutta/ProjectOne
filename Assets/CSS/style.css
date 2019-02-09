@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Itim');
+
+body {
+	background: #F2994A;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #F2C94C, #F2994A);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #F2C94C, #F2994A);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Itim', cursive;
+}
+
+.load {
+	margin-top: 100px;
+}
+
+p {
+	text-align: left;
+}
+
+input {
+	font-family: 'Itim', cursive;
+}
+
+.container {
+	width: 95%;
+}
+
+.clear {
+	clear: both;
+}
+
+nav {
+	height: 100px;
+	background-color: transparent;
+}
+
+.nav-wrapper {
+	border: none;
+}
+
+.nlink:hover {
+	font-weight: bolder;
+	background: #f34f39;
+	border-radius: 10px;
+}
+
+/* .mini {
+	margin-left: 33% !important;
+	width: 550px !important;
+} */
+
+.head-logo {
+	font-size: 70px;
+	color: #ffffff;
+}
+
+.logo-head {
+	margin-top: 2%;
+}
+
+.full {
+	-webkit-transition: background-image .5s linear;
+	/* Safari */
+	transition: background-image .5s linear;
+	background-image: url(../Imgs/food.jpeg);
+	background-repeat: no-repeat;
+	background-position: -200px -760px;
+	border-bottom: 5px solid #ffffff;
+
+}
+
+
+.full:hover {
+	background-image: url(../Imgs/food-blur.png);
+	background-repeat: no-repeat;
+	background-position: -200px -760px;
+	border-bottom: 5px solid #ffffff;
+}
+
+.search {
+	color: #fff;
+	text-align: center;
+	font-size: 40px !important;
+	margin-top: 50px !important;
+	background-color: #24232362 !important;
+	border-radius: 10px !important;
+}
+
+
+.radios {
+	background-color: #00000011;
+}
+
+.search-btn {
+	width: 375px;
+	font-family: 'Itim', cursive;
+	font-size: 17px;
+	height: 40px;
+	border-radius: 5px;
+}
+
+body .search-btn:hover {
+	font-size: 19px;
+	color: #f5523d;
+	background-color: #fff !important;
+}
+
+.foods-box {
+	margin-left: 40px;
+	overflow: hidden;
+	margin-top: 40px;
+}
+
+.drinks-box {
+	clear: both;
+}
+
+.boxes {
+	float: left;
+	margin: 5px;
+	-webkit-box-shadow: 8px -2px 31px -9px rgba(51, 51, 51, 1);
+	-moz-box-shadow: 8px -2px 31px -9px rgba(51, 51, 51, 1);
+	box-shadow: 8px -2px 31px -9px rgba(51, 51, 51, 1);
+	border-radius: 10px;
+	background-color: #ffffffb4;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	margin-top: 20px;
+}
+
+.boxes img {
+	height: auto;
+	width: 270px;
+	border-radius: 2%;
+}
+
+.boxes h4 {
+	font-size: 20px;
+	color: #000;
+}
+
+.boxes #butt {
+	float: left;
+	background-color: #f5523d;
+	color: white;
+	margin-left: 12px;
+	border-radius: 5px;
+}
+
+#butt:hover {
+	color: #f5523d;
+	background-color: #fff;
+}
+
+.rWhite {
+	color: white;
+}
+
+label .rWhite {
+	color: white;
+}
+
+#drink-div img {
+	height: auto;
+	width: 500px;
+}
+
+/* Rad CSS */
+h2 {
+	color: beige;
+	text-align: center;
+}
+
+#drink-div {
+	text-align: center;
+}
+
+#drink-div img {
+	border-radius: 15px;
+}
+
+#name-div {
+	color: black;
+	background-color: #ffffffb4;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 200px;
+	text-align: center;
+}
+
+#glass-div {
+	color: black;
+	background-color: #ffffffb4;
+	;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 300px;
+	text-align: center;
+}
+
+#ingredients-div {
+	color: black;
+	background-color: #ffffffb4;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 300px;
+	text-align: center;
+}
+
+#directions-div {
+	color: black;
+	background-color: #ffffffb4;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 50%;
+	text-align: center;
+}
