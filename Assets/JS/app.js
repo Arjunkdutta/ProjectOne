@@ -8,6 +8,7 @@ $(document).ready(function () {
 	//click function that searches through 2 APIs depending on user selection
 
 	$("#Sfood").click(function () {
+
 		//emptys the display
 		$("#drink-div").empty();
 		$("#preset").empty();
@@ -108,43 +109,30 @@ $(document).ready(function () {
 						image.attr("src", response.drinks[0].strDrinkThumb);
 						var category = $("<p>").text(JSON.stringify(response.drinks[0].strCategory));
 						var name = $("<p>").text(JSON.stringify(response.drinks[0].strDrink));
-						var alcoholic = $("<p>").text(JSON.stringify(response.drinks[0].strAlcoholic));
-						var glass = $("<p>").text(JSON.stringify(response.drinks[0].strGlass));
 
-						//  creates a paragraph for every ingredient and measurement. 
-						var strIngredient1 = $("<p>").text(JSON.stringify(response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1));
-						var strIngredient2 = $("<p>").text(JSON.stringify(response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2));
-						var strIngredient3 = $("<p>").text(JSON.stringify(response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3));
-						var strIngredient4 = $("<p>").text(JSON.stringify(response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4));
-						var strIngredient5 = $("<p>").text(JSON.stringify(response.drinks[0].strMeasure5 + " " + response.drinks[0].strIngredient5));
-						var strIngredient6 = $("<p>").text(JSON.stringify(response.drinks[0].strMeasure6 + " " + response.drinks[0].strIngredient6));
+						var glass = $("<p>").text(response.drinks[0].strGlass);
 
-						//  creates paragraphs for instructions and IBA
-						var instructions = $("<p>").text(JSON.stringify(response.drinks[0].strInstructions));
-						var IBA = $("<p>").text(JSON.stringify(response.drinks[0].strIBA));
-
-						//  lines separating each section
-						var line1 = $("<p>").text("-----------------------------------------------");
-						var line2 = $("<p>").text("-----------------------------------------------");
-						var line3 = $("<p>").text("-----------------------------------------------");
+						//  creates a paragraph for every ingredient and measurement.
+						var strIngredient1 = $("<p>").text(response.drinks[0].strMeasure1 + " " + response.drinks[0].strIngredient1);
+						var strIngredient2 = $("<p>").text(response.drinks[0].strMeasure2 + " " + response.drinks[0].strIngredient2);
+						var strIngredient3 = $("<p>").text(response.drinks[0].strMeasure3 + " " + response.drinks[0].strIngredient3);
+						var strIngredient4 = $("<p>").text(response.drinks[0].strMeasure4 + " " + response.drinks[0].strIngredient4);
+						var strIngredient5 = $("<p>").text(response.drinks[0].strMeasure5 + " " + response.drinks[0].strIngredient5);
+						var strIngredient6 = $("<p>").text(response.drinks[0].strMeasure6 + " " + response.drinks[0].strIngredient6);
+						var instructions = $("<p>").text(response.drinks[0].strInstructions);
 
 						//  appending variables in "drink-div"
 						$("#drink-div").append(image);
-						$("#drink-div").append(name);
-						$("#drink-div").append(category);
-						$("#drink-div").append(alcoholic);
-						$("#drink-div").append(line1);
-						$("#drink-div").append(glass);
-						$("#drink-div").append(IBA);
-						$("#drink-div").append(line2);
-						$("#drink-div").append(strIngredient1);
-						$("#drink-div").append(strIngredient2);
-						$("#drink-div").append(strIngredient3);
-						$("#drink-div").append(strIngredient4);
-						$("#drink-div").append(strIngredient5);
-						$("#drink-div").append(strIngredient6);
-						$("#drink-div").append(line3);
-						$("#drink-div").append(instructions);
+						$("#name-div").append(name);
+						$("#glass-div").append(glass);
+						$("#ingredients-div").append(strIngredient1);
+						$("#ingredients-div").append(strIngredient2);
+						$("#ingredients-div").append(strIngredient3);
+						$("#ingredients-div").append(strIngredient4);
+						$("#ingredients-div").append(strIngredient5);
+						$("#ingredients-div").append(strIngredient6);
+						$("#directions-div").append(instructions);
+
 					}
 				});
 			}
