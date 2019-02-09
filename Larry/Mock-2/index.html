@@ -11,18 +11,18 @@
 	<title>Mock 2</title>
 </head>
 
-<div class="full">
 
-	<body>
+<body>
+	<div class="full">
 		<nav class="">
 			<div class="nav-wrapper">
 				<a href="#!" class="brand-logo center white-text logo-head"><span class="head-logo">McStayAtHome</span></a>
 				<ul class="right">
-					<li class="hide-on-med-and-down"><a href="https://developer.edamam.com/" class="white-text flow-text">API 1</a></li>
-					<li class="hide-on-med-and-down"><a href="https://www.thecocktaildb.com/api.php" class="white-text flow-text">API
+					<li class="hide-on-med-and-down"><a href="https://developer.edamam.com/" class="white-text flow-text nlink">API 1</a></li>
+					<li class="hide-on-med-and-down"><a href="https://www.thecocktaildb.com/api.php" class="white-text flow-text nlink">API
 							2</a></li>
-					<li class="hide-on-med-and-down"><a href="https://github.com/Arjunkdutta/ProjectOne" class="white-text flow-text">Github</a></li>
-					<li class="hide-on-large-only"><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right white-text">menu</i></a></li>
+					<li class="hide-on-med-and-down"><a href="https://github.com/Arjunkdutta/ProjectOne" class="white-text flow-text nlink">Github</a></li>
+					<li class="hide-on-large-only"><a class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons right white-text nlink">menu</i></a></li>
 				</ul>
 				<ul id="dropdown1" class="dropdown-content white-text">
 					<li><a href="#" disabled selected><span class="red-text">Close</span></a></li>
@@ -34,22 +34,10 @@
 		</nav>
 
 
-		<!-- 
-		<div class="section center-align">
-			<h2> <span class="white-text">Food Selection</span>
-			</h2>
-		</div> -->
-
 		<div class="row">
 
-			<!-- <div class="col s-1">
-				<label style="color:#ffffff; font-size: 40px; margin-left: 25px; margin-right: 0; ">Recipe Search</label>
-			</div> -->
-
-			<div class="col offset-s4 s4">
-				<input type="text" class="search" id="Fsearch" placeholder="Ex: Hamburger" value="" style="font-size:40px; 	margin-top: 50px;
-				"
-				 onfocus="this.placeholder=''" onblur="this.placeholder='Ex: Hamburger' ">
+			<div class="col offset-s4 s4 mini">
+				<input type="text" class="search" id="Fsearch" placeholder="Ex: Hamburger" onfocus="this.placeholder=''" onblur="this.placeholder='Ex: Hamburger' ">
 			</div>
 
 		</div>
@@ -69,25 +57,29 @@
 		</div>
 		<!--End of Row-->
 		<div class="row">
-			<div class="col offset-6 s1 ">
-				<button class="btn waves-effect waves-light btn-small red" id="Sfood" type="button" name="submit">Search
+			<div class="col  s12 center-align ">
+				<button class="btn waves-effect waves-light btn-small red search-btn" id="Sfood" type="button" name="submit"
+				 ">Search
 				</button>
+				</div>
 			</div>
 		</div>
-</div>
 
-<div class="container">
-	<div id="preset" class="center-align">
-	</div><!-- End Preset Div -->
+			<div class=" container">
+					<div id="preset" class="center-align foods-box">
+					</div><!-- End Preset Div -->
 
-	<div id="drink-div" class="center-align"></div>
-	<!-- Container End -->
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+					<div id="drink-div" class="center-align drinks-box"></div>
+					<!-- Container End -->
+			</div>
 
-<script src="js-2.js"></script>
+
+			<!-- JS/Jquery -->
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+			<script src="js-2.js"></script>
 </body>
 
 </html>
