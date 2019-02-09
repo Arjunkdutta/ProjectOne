@@ -27,11 +27,22 @@ $(document).ready(function () {
 			console.log(que);
 			let radio = $("input[name=group1]:checked").val();
 			console.log(radio);
+			$("#preset").append(`  <div class="preloader-wrapper big active load">
+				<div class="spinner-layer spinner-blue">
+				<div class="circle-clipper left">
+				<div class="circle"></div>
+			  	</div><div class="gap-patch">
+				<div class="circle"></div>
+			  	</div><div class="circle-clipper right">
+				<div class="circle"></div>
+			  	</div>
+				</div>`);
 			$.ajax({
 				//cors with heroku for edamam API
-				url: 'https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=' + que + '&app_id=4e81de9e&app_key=372f6145e47ac69d679f51f5e49be2ed&from=0&to=8',
+				url: 'https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=' + que + '&app_id=4e81de9e&app_key=372f6145e47ac69d679f51f5e49be2ed&from=0&to=12',
 				method: 'GET',
 			}).then(function (response) {
+				$(".load").remove();
 				console.log(response);
 				if (response.count == 0 || que === "mojito" || que === "whiskey") {
 
@@ -47,7 +58,7 @@ $(document).ready(function () {
 					let recipe = element.recipe;
 					let name = recipe.label;
 
-					function truncate(string) {
+					function shorten(string) {
 						if (string.length > 23)
 							return string.substring(0, 23) + '...';
 						else
@@ -56,9 +67,9 @@ $(document).ready(function () {
 
 					$("#preset").append(`
 					<div class='boxes'>
-					<h4>" ` + truncate(name) + `"</h4>
+					<h4>" ` + shorten(name) + `"</h4>
 					<img src="` + recipe.image + `">
-					<form action="` + recipe.url + `">
+					<form action="` + recipe.url + `" target="_blank">
 					<input type='submit' class="btn" id="butt" value='Full Recipe'>
 					</form>
 					<button data-target="modal` + i + `" class="btn modal-trigger" id="butt">Ingredients</button>
@@ -68,8 +79,6 @@ $(document).ready(function () {
 					<div id="item` + i + `"></div>
 					</div>
 					</div>`);
-
-
 
 					recipe.ingredientLines.forEach(function (ing) {
 						console.log(ing);
