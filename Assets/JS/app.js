@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	let que = "";
+
 	//Reg Exp for input validation
 	var special = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?@]/);
 
@@ -108,6 +109,7 @@ $(document).ready(function () {
 						image.attr("src", response.drinks[0].strDrinkThumb);
 						var category = $("<p>").text(JSON.stringify(response.drinks[0].strCategory));
 						var name = $("<p>").text(JSON.stringify(response.drinks[0].strDrink));
+
 						var glass = $("<p>").text(response.drinks[0].strGlass);
 
 						//  creates a paragraph for every ingredient and measurement.
@@ -130,6 +132,7 @@ $(document).ready(function () {
 						$("#ingredients-div").append(strIngredient5);
 						$("#ingredients-div").append(strIngredient6);
 						$("#directions-div").append(instructions);
+
 					}
 				});
 			}
